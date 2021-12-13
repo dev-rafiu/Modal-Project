@@ -1,0 +1,130 @@
+:root {
+  --clr-primary-5: #49a6e9;
+  --clr-grey-1: hsl(209, 61%, 16%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+body {
+  color: var(--clr-grey-1);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--clr-primary-5);
+}
+
+.hero,
+.modal-overlay {
+  display: grid;
+  place-items: center;
+}
+
+.hero {
+  min-height: 100vh;
+  background: url(./street.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner,
+.modal-content {
+  width: 80vw;
+  padding: 4rem 0;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 620px;
+  text-align: center;
+}
+
+.title {
+  text-transform: capitalize;
+}
+.open-modal {
+  margin-top: 2rem;
+  background-color: var(--clr-primary-5);
+  border: 1px solid var(--clr-primary-5);
+  padding: 0.4rem 2rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(79, 181, 213, 0.5);
+  visibility: hidden;
+  z-index: -10;
+}
+
+.show-modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.close-modal {
+  color: var(--clr-primary-5);
+  font-size: 3rem;
+  position: absolute;
+  top: 0.3rem;
+  right: 1rem;
+}
+.close-modal:hover {
+  transform: scale(0.9);
+}
